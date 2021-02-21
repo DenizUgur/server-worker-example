@@ -3,7 +3,7 @@ import { Switch, Route, useRouteMatch, Redirect } from "react-router-dom";
 import styles from "./Dashboard.module.scss";
 
 import { AppBar } from "../../components";
-import { Jobs } from "./Routes";
+import { Jobs, New } from "./Routes";
 
 export default function Dashboard() {
 	const { path } = useRouteMatch();
@@ -15,7 +15,7 @@ export default function Dashboard() {
 						<Jobs />
 					</Route>
 					<Route path={`${path}/new`}>
-						New
+						<New />
 					</Route>
 					<Route path={`${path}/settings`}>Settings</Route>
 					<Route path={path}>
