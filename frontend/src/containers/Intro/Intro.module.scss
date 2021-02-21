@@ -1,0 +1,114 @@
+@import "../../mixins/colors";
+@import "../../mixins/shadow";
+
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+
+body {
+	background-color: $bgcolor;
+	background-image: url("../../assets/img/circuit-board.svg");
+}
+
+
+.root {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+
+	width: 100vw;
+	height: 100vh;
+
+	font-family: "Quicksand", sans-serif;
+}
+
+.welcome {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	background: $accent;
+	background: linear-gradient(to bottom, $accent2, $accent);
+
+	max-width: 768px;
+	min-height: 50vh;
+	border-radius: 0 0 2rem 2rem;
+	box-shadow: $dp_6;
+
+	h1 {
+		margin: 0;
+		padding: 0;
+		padding-top: 10%;
+
+		font-family: "Lobster", cursive;
+		font-weight: 600;
+		font-size: 10rem;
+		color: white;
+	}
+
+	p {
+		max-width: 80%;
+		font-size: 1.2rem;
+		color: #eee;
+	}
+}
+
+.button_group {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 2rem 0;
+
+	& > * {
+		transition: all 0.1s ease-in-out;
+
+		&:hover {
+			transform: scale(1.05);
+		}
+
+		&:active {
+			transform: scale(0.95);
+		}
+	}
+
+	button {
+		margin: 0 1rem;
+		width: 10rem;
+		height: 3rem;
+		font-size: 100%;
+		cursor: pointer;
+
+		border: 2px solid #fff;
+		background-color: $accent;
+		border-radius: 5rem;
+		color: white;
+		box-shadow: $dp_4;
+
+		&.demo {
+			background-color: unset;
+			color: #000;
+			border: 2px solid #000;
+		}
+	}
+
+	.signup {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		span {
+			margin-top: 0.2rem;
+			font-size: 0.8rem;
+		}
+	}
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100vw;
+	text-align: center;
+	padding: 1rem 0;
+}

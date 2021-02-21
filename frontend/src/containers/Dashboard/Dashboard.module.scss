@@ -1,0 +1,26 @@
+@import "../../mixins/shadow";
+
+.Root {
+	display: flex;
+	flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+
+    &::before {
+        content: "";
+    }
+}
+
+.Container {
+	display: flex;
+    justify-content: center;
+	align-items: center;
+
+    flex-grow: 1;
+    max-height: 913px;
+
+    background-color: #fff;
+    margin: 4rem;
+    border-radius: 1rem;
+    box-shadow: $dp_2;
+}

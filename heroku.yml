@@ -1,0 +1,10 @@
+setup:
+  addons:
+    - plan: heroku-postgresql
+    - plan: heroku-redis
+    - plan: sentry
+build:
+  docker:
+    web: Dockerfile
+run:
+  web: npm --prefix /opt/backend/server start

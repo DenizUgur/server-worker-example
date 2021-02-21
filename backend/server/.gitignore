@@ -1,0 +1,3 @@
+build/
+nodemon.json
+.prettierrc

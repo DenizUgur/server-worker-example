@@ -1,0 +1,24 @@
+.Root {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+
+	h1,
+	p {
+		text-align: center;
+	}
+
+	h1 {
+		padding: 0;
+        margin: 1rem 0 0 0;
+	}
+
+    span {
+        flex: 1;
+    }
+}
+
+.Table {
+	width: 100%;
+}
