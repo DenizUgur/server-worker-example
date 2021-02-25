@@ -6,6 +6,7 @@ import express from "express";
 import helmet from "helmet";
 import cors from "cors";
 import redis from "redis";
+import { resolve } from "path";
 
 import cookieParser from "cookie-parser";
 import session from "express-session";
@@ -15,9 +16,10 @@ const dev = process.env.NODE_ENV !== "production";
 //* APP
 const app = express();
 app.set("trust proxy", 1);
+app.use("/static", express.static(resolve("../../frontend/build/static")));
 
 //* Basic protection
-app.use(helmet());
+app.use(helmet({ contentSecurityPolicy: false }));
 app.use(
 	cors({
 		origin: dev ? "*" : "https://battery-sizing-program.herokuapp.com/",

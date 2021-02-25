@@ -15,11 +15,13 @@ ADD . /opt
 
 # Install dependencies
 RUN cd /opt && \
-    npm ci && \
-    npm --prefix server/ ci && \
-    npm --prefix server/ build && \
-    npm --prefix worker/ ci && \
-    npm --prefix worker/ build
+    npm --prefix backend ci && \
+    npm --prefix backend/server/ ci && \
+    npm --prefix backend/worker/ ci && \
+    npm --prefix frontend/ ci && \
+    npm --prefix backend/server/ build && \
+    npm --prefix backend/worker/ build && \
+    npm --prefix frontend/ build
 
 ENV NODE_ENV="production"
 WORKDIR /opt
