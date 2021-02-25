@@ -26,25 +26,10 @@ if (process.env.NODE_ENV == "production") {
 	);
 }
 
-const User = sequelize.define(
-	"user",
+const Job = sequelize.define(
+	"job",
 	{
-		email: {
-			type: DataTypes.STRING,
-			primaryKey: true,
-		},
-	},
-	{
-		freezeTableName: true,
-		createdAt: false,
-		updatedAt: false,
-	}
-);
-
-const Jobs = sequelize.define(
-	"user",
-	{
-		userEmail: {
+		userId: {
 			type: DataTypes.STRING,
 			primaryKey: true,
 		},
@@ -52,6 +37,16 @@ const Jobs = sequelize.define(
 			type: DataTypes.STRING,
 			primaryKey: true,
 		},
+		state: {
+			type: DataTypes.ENUM("queued", "inprogress", "finished", "failed"),
+		},
+		inputData: {
+			type: DataTypes.JSON,
+			allowNull: false,
+		},
+		outputData: {
+			type: DataTypes.JSON,
+		},
 	},
 	{
 		freezeTableName: true,
@@ -60,8 +55,5 @@ const Jobs = sequelize.define(
 	}
 );
 
-User.hasMany(Jobs);
-Jobs.belongsTo(User);
-
 export default sequelize;
-export { User };
+export { Job };

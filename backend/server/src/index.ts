@@ -7,7 +7,7 @@ import server from "./core/server";
 const PORT = process.env.PORT || 5000;
 
 //* App Start
-import sequelize from "./db";
+import sequelize from "../../db";
 import routerApi from "./core/api";
 import checkJwt from "./core/auth";
 
