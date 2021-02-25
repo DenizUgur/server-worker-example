@@ -2,7 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "scripts": {
-    "start": "node build/index.js",
+    "start": "node build/server/src/index.js",
     "start:dev": "npm run build && node -r dotenv/config build/server/src/index.js",
     "dev": "nodemon",
     "build": "rimraf ./build && tsc"

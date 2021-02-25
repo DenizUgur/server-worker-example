@@ -5,9 +5,9 @@ setup:
         - plan: sentry
 build:
     docker:
-        web: backend/Dockerfile
+        web: Dockerfile
 run:
-    web: npm --prefix /opt/server start
+    web: npm --prefix /opt/backend/server start
     worker:
-        command: npm --prefix /opt/worker start
+        command: npm --prefix /opt/backend/worker start
         image: web

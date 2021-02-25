@@ -2,7 +2,7 @@
   "name": "worker",
   "version": "1.0.0",
   "scripts": {
-    "start": "node build/index.js",
+    "start": "node build/worker/src/index.js",
     "start:dev": "npm run build && node -r dotenv/config build/worker/src/index.js",
     "dev": "nodemon",
     "build": "rimraf ./build && tsc"
