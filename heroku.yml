@@ -1,12 +1,13 @@
 setup:
-  addons:
-    - plan: heroku-postgresql
-    - plan: heroku-redis
-    - plan: sentry
+    addons:
+        - plan: heroku-postgresql
+        - plan: heroku-redis
+        - plan: sentry
 build:
-  docker:
-    web: backend/server/Dockerfile
-    worker: backend/worker/Dockerfile
+    docker:
+        web: backend/Dockerfile
 run:
-  web: npm --prefix /opt/server start
-  worker: npm --prefix /opt/worker start
+    web: npm --prefix /opt/server start
+    worker:
+        command: npm --prefix /opt/worker start
+        image: web
