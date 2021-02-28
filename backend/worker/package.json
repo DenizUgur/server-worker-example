@@ -1,11 +1,27 @@
 {
   "name": "worker",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node build/worker/src/index.js",
+    "start:dev": "npm run build && node -r dotenv/config build/worker/src/index.js",
+    "dev": "nodemon",
+    "build": "rimraf ./build && tsc"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bull": "^3.20.1",
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.5.0",
+    "throng": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/bull": "^3.15.0",
+    "@types/throng": "^5.0.0",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.7",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.2.2"
+  }
 }

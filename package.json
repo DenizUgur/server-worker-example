@@ -1,0 +1,23 @@
+{
+	"name": "battery-sizing-program",
+	"version": "1.0.0",
+	"scripts": {
+		"start": "concurrently -c 'bgBlue.bold,bgRed.bold,bgGreen.bold' -n server,worker,ui 'npm run start:server' 'npm run start:worker' 'npm run start:ui'",
+		"start:server": "npm --prefix backend/server/ run dev",
+		"start:worker": "npm --prefix backend/worker/ run dev",
+		"start:ui": "npm --prefix frontend/ run start"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/DenizUgur/battery-sizing-program.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/DenizUgur/battery-sizing-program/issues"
+	},
+	"homepage": "https://github.com/DenizUgur/battery-sizing-program#readme",
+	"devDependencies": {
+		"concurrently": "^6.0.0"
+	}
+}
