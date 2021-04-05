@@ -9,25 +9,30 @@ function App() {
 	return (
 		<div className={styles.root}>
 			<div className={styles.welcome}>
-				<h1>Battery.</h1>
+				<h1>Batarya.</h1>
+				
 				<p>
-					Lorem Ipsum is simply dummy text of the printing and
-					typesetting industry. Lorem Ipsum has been the industry's
-					standard dummy text ever since the 1500s, when an unknown
-					printer took a galley of type and scrambled it to make a
-					type specimen book.
+					<b>
+					Özyeğin Üniversitesi 
+					</b>
+				</p>
+				<p>
+					Şebeke Planlama ve Operasyon Laboratuvarı
+				</p>
+				<p>
+					Mikro-Şebeke ve Müstakil Batarya Analizi
 				</p>
 			</div>
 			<div className={styles.button_group}>
-				<button className={styles.demo}>See a demo</button>
+				<button className={styles.demo}>Örnek Analiz</button>
 				<div className={styles.signup}>
-					<button onClick={() => loginWithRedirect()}>Sign Up</button>
+					<button onClick={() => loginWithRedirect()}>Giriş Yap</button>
 					<span>
-						or <strong>login</strong>
+						ya da <strong>Kayıt Ol</strong>
 					</span>
 				</div>
 			</div>
-			<footer>Copyright &copy; 2021</footer>
+			<footer>Tüm Hakları Saklıdır &copy; 2021 Emin Kartcı - Göktürk Poyrazoğlu - Deniz Uğur</footer>
 		</div>
 	);
 }
