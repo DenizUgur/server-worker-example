@@ -22,7 +22,7 @@ app.use("/static", express.static(resolve("../../frontend/build/static")));
 app.use(helmet({ contentSecurityPolicy: false }));
 app.use(
 	cors({
-		origin: dev ? "*" : "https://battery-sizing-program.herokuapp.com/",
+		origin: dev ? "*" : "https://server-worker-example.herokuapp.com/",
 		credentials: true,
 		allowedHeaders: "Content-Type, Set-Cookie, Authorization",
 	})

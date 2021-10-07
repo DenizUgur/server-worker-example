@@ -1,5 +1,5 @@
 {
-	"name": "battery-sizing-program",
+	"name": "server-worker-example",
 	"version": "1.0.0",
 	"scripts": {
 		"start": "concurrently -c 'bgBlue.bold,bgRed.bold,bgGreen.bold' -n server,worker,ui 'npm run start:server' 'npm run start:worker' 'npm run start:ui'",
@@ -9,14 +9,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/DenizUgur/battery-sizing-program.git"
+		"url": "git+https://github.com/DenizUgur/server-worker-example.git"
 	},
 	"author": "",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/DenizUgur/battery-sizing-program/issues"
+		"url": "https://github.com/DenizUgur/server-worker-example/issues"
 	},
-	"homepage": "https://github.com/DenizUgur/battery-sizing-program#readme",
+	"homepage": "https://github.com/DenizUgur/server-worker-example#readme",
 	"devDependencies": {
 		"concurrently": "^6.0.0"
 	}
